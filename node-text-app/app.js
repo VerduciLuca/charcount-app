@@ -15,6 +15,9 @@ const readFileAndProcess = (filename) => {
         const wordsCount = data.split(/\s+/).filter(word => word !== '').length; //filter per restituire tutti ciò che non è uno spazio dopo la split
 
         const characterOccurrences = _.countBy(data.replace(/\s/g, '')); //countby sta contando carattere per carattere
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
         const mostFrequentCharacter = Object.entries(characterOccurrences)
         .reduce((acc, [char, count]) => (count > acc.count ? { char, count } : acc), { char: '', count: 0 });
