@@ -1,4 +1,0 @@
-numero caratteri: 127 (non compresi gli spazi)
-numero parole: 27
-carattere con più occorrenze: o (16 occorrenze)
-parola con più occorrenze: il (2 occorrenze)

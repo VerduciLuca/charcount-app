@@ -15,12 +15,9 @@ const readFileAndProcess = (filename) => {
         const wordsCount = data.split(/\s+/).filter(word => word !== '').length; //filter per restituire tutti ciò che non è uno spazio dopo la split
 
         const characterOccurrences = _.countBy(data.replace(/\s/g, '')); //countby sta contando carattere per carattere
-//------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-        const mostFrequentCharacter = Object.entries(characterOccurrences)
-        .reduce((acc, [char, count]) => (count > acc.count ? { char, count } : acc), { char: '', count: 0 });
+        const mostFrequentCharacter = Object.entries(characterOccurrences) //entries trasforma gli oggetti in array formati dalle loro key e valori
+        .reduce((acc, [char, count]) => (count > acc.count ? { char, count } : acc), { char: '', count: 0 }); //reduce per confrontare le occurences nelle entries
 
       // Calcola le occorrenze di ciascuna parola nel testo
         const wordOccurrences = _.countBy(data.split(/\s+/).filter(word => word !== ''));
